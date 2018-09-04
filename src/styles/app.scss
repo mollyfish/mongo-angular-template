@@ -1,0 +1,23 @@
+// VENDOR
+@import "vendor/reset.scss";
+// @import "vendor/animations.scss";
+
+// MODULES
+@import "modules/layout.scss";
+@import "modules/colors.scss";
+@import "modules/typography.scss";
+@import "modules/icons.scss";
+
+
+// PARTIALS
+@import "partials/header.scss";
+@import "partials/subheader.scss";
+@import "partials/list.scss";
+@import "partials/splashHeader.scss";
+@import "partials/contact.scss";
+@import "partials/nav.scss";
+@import "partials/section.scss";
+@import "partials/images.scss";
+@import "partials/buttons.scss";
+@import "partials/footer.scss";
+
