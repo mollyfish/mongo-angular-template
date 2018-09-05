@@ -1,0 +1,23 @@
+<form name="{{formName}}" data-ng-submit="save({thing: thing})">
+  <h2>{{headingText}}</h2>
+  <fieldset class="radios">
+    <input type="radio" ng-model="thing.type" name="type" id="{{thing._id}}typeOne" value="typeOne">
+    <label for="{{thing._id}}typeOne"> Type One</label>
+    <input type="radio" ng-model="thing.type" name="type" id="{{thing._id}}typeTwo" value="typeTwo"> 
+    <label for="{{thing._id}}typeTwo"> Type Two</label>
+    <input type="radio" ng-model="thing.type" name="type" id="{{thing._id}}typeThree" value="typeThree">
+    <label for="{{thing._id}}typeThree"> Type Three</label>
+    <input type="radio" ng-model="thing.type" name="type" id="{{thing._id}}typeFour" value="typeFour">
+    <label for="{{thing._id}}typeFour"> Type Four</label>
+  </fieldset>
+  <label for="{{thing._id}}number">Number:</label>
+  <input type="number" id="{{thing._id}}number" data-ng-model="thing.number"/>
+  <label for="{{thing._id}}color">Color:</label>
+  <input type="text" id="{{thing._id}}color" data-ng-model="thing.color" placeholder="mi / m / hrs" size="10" />
+  <label for="{{thing._id}}date">Date &amp; Time:</label>
+  <input type="datetime-local" id="{{thing._id}}date" data-ng-model="thing.date" />
+  <label class="notes" for="{{thing._id}}comments">Notes:</label>
+  <input class="notes" type="text" id="{{thing._id}}comments" data-ng-model="thing.comments" size="50" />
+  <button type="submit">{{buttonText}}</button>
+  <ng-transclude></ng-transclude>
+</form>

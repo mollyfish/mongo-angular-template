@@ -1,12 +1,17 @@
-var dest = './public';
-var src = './src';
+var src = './app';
+var dest = './build';
 
 module.exports = {
-  javascript: {
-    src: src + '/app/**/*.js',
+  webpackDev: {
+    src: src + '/js/**/*.js',
     dest: dest + '/js/',
-    entryPoint: src + '/webpack-entry.js',
-    packedFile: 'packed.js'
+    entryPoint: src + '/js/entry.js',
+    packedFile: 'bundle.js'
+  },
+  webpackTest: {
+    src: 'test/client/test_entry.js',
+    dest: 'test/client/',
+    packedFile: 'test.bundle.js'
   },
   sass: {
     src: src + '/styles/**/*.{sass,scss}',
@@ -16,23 +21,19 @@ module.exports = {
     }
   },
   html: {
-    src: src + '/**/*.html',
+    src: src + "/*.html",
     dest: dest,
   },
-  favicon: {
-    src: src + '/favicon.png',
-    dest: dest,
+  views: {
+    src: src + '/js/templates/*.html',
+    dest: dest + '/views/'
   },
-  fonts: {
-    src: src + '/styles/fonts/*',
-    dest: dest + '/styles/fonts/',
+  server: {
+    serverFile: './server.js'
   },
-  images: {
-    src: src + "/images/*",
-    dest: dest + "/images/"
-  },
-  serveprod: {
-    src: src,
+  production: {
+    cssSrc: dest + '/styles/*.css',
+    jsSrc: dest + '/*.js',
     dest: dest
   }
 };

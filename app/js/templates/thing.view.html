@@ -1,0 +1,35 @@
+<article data-ng-controller="ThingsController" data-ng-init="getAll()">
+
+  <div class="new-thing" data-thing-form-directive
+    data-button-text="Save New Thing"
+    data-form-name="newThingForm"
+    data-heading-text="Create A New Thing"
+    data-thing="newThing"
+    data-save="create(thing)">
+  </div>
+
+  <section data-list-directive data-title="Things List:">
+    <ul id="errorsList">
+      <li data-ng-repeat="error in errors">{{error}}</li>
+    </ul>
+
+    <ul id='thinglist' class="thing-list">
+      <li data-ng-repeat="thing in things | orderBy: 'date'" class="thing">
+        <div data-thing-directive data-thing="thing"></div>
+        <div class="edit-thing" data-thing-form-directive
+          data-ng-if="thing.editing"
+          data-button-text="Save Edited Thing"
+          data-form-name="edit{{thing._id}}"
+          data-heading-text="Edit {{thing.name}}"
+          data-thing="thing"
+          data-save="update(thing)">
+          <button data-ng-click="thing.editing = false; resetThing(thing)">Cancel Thing Edits</button>
+        </div>
+        
+        <button data-ng-if="!thing.editing" data-ng-click="thing.editing = true; rememberThing(thing)">(edit this thing)</button>
+        
+        <button data-ng-if="!thing.editing" data-ng-click="remove(thing)">(murder this thing)</button>
+      </li>
+    </ul>
+  </section>
+</article>

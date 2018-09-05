@@ -1,0 +1,33 @@
+.thing-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.thing {
+  border: 1px solid #000;
+  width: 14%;
+  padding: 0.667em;
+  h2 {
+    margin-top: 0;
+  }
+  button {
+    float: right;
+    font-size: $tiny-text;
+    padding: 0;
+    margin: 0 0 3px 0;
+    border: none;
+    background-color: transparent;
+  }
+}
+.typeOne {
+  color: blue;
+}
+.typeTwo {
+  color: red;
+}
+.typeThree {
+  color: green;
+}
+.typeFour {
+  color: orange;
+}

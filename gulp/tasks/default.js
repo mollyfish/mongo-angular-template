@@ -1,2 +1,4 @@
 var gulp = require('gulp');
-gulp.task('default', ['html', 'images', 'sass', 'favicon', 'fonts', 'webpack']);
+
+gulp.task('build:dev', ['webpack:dev', 'html', 'views', 'sass', 'watch']);
+gulp.task('default', ['build:dev']);

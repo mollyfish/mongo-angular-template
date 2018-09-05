@@ -1,0 +1,7 @@
+<h2 ng-class="{'typeOne': thing.type == 'typeOne', 'typeThree': thing.type == 'typeThree', 'typeTwo': thing.type == 'typeTwo', 'typeFour': thing.type == 'typeFour'}">
+    {{thing.type | capitalize}} {{thing.number}} {{thing.color}}</h2>
+<p class="date">{{thing.date | date: "EEE, MMM d, yyyy"}}</p><p class="date">{{thing.date | date: 'shortTime'}}</p>
+<p class="comments">{{thing.comments | limitTo:15}}{{thing.comments.length > 15 ? '...' : ''}}</p>
+
+
+
